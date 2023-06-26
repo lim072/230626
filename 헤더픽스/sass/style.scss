@@ -1,0 +1,127 @@
+@charset "UTF-8";
+@import "reset.scss";
+
+body {
+    background-color: #292929;
+    min-height: 200vh;
+
+    header {
+        width: 100%;
+        position: fixed;
+        transition: 0.5s;
+        overflow: hidden;
+
+        &.on {
+            background-color: #EEE;
+
+            .inner {
+                h1 {
+                    a {
+                        img {
+                            &:nth-of-type(1) {
+                                transform: translateY(100px);
+                            }
+
+                            &:nth-of-type(2) {
+                                transform: translateY(0px);
+                            }
+
+                        }
+                    }
+                }
+
+                #gnb {
+                    li {
+                        &:hover {
+                            color: darkcyan;
+                        }
+
+                        a {
+                            transform: translateY(100px);
+                        }
+
+                        i {
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+        }
+
+        .inner {
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
+            display: flex;
+
+            h1 {
+                flex: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+
+                a {
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        margin-top: -20px;
+                        margin-left: -100px;
+                        transition: 0.5s;
+
+                        &:nth-of-type(2) {
+                            transform: translateY(-100px);
+                        }
+                    }
+                }
+            }
+
+            #gnb {
+                flex: 4.5;
+                top: 50px;
+                text-align: center;
+                margin-right: 50px;
+                z-index: 7;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+
+                li {
+                    float: left;
+                    width: 150px;
+                    position: relative;
+
+                    &:hover {
+                        a {
+                            background-color: #fff;
+                            color: #292929;
+                        }
+                    }
+
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 50px;
+                        font: bold 25px/50px "맑은 고딕";
+                        color: #fff;
+                        transition: 0.5s;
+                    }
+
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        font-size: 30px;
+                        margin-top: -15px;
+                        margin-left: -15px;
+                        transition: 0.5s;
+                        transform: translateY(-100px);
+                    }
+                }
+            }
+        }
+    }
+}

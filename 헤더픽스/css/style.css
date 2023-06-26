@@ -1,0 +1,109 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  background-color: #292929;
+  min-height: 200vh;
+}
+body header {
+  width: 100%;
+  position: fixed;
+  transition: 0.5s;
+  overflow: hidden;
+}
+body header.on {
+  background-color: #EEE;
+}
+body header.on .inner h1 a img:nth-of-type(1) {
+  transform: translateY(100px);
+}
+body header.on .inner h1 a img:nth-of-type(2) {
+  transform: translateY(0px);
+}
+body header.on .inner #gnb li:hover {
+  color: darkcyan;
+}
+body header.on .inner #gnb li a {
+  transform: translateY(100px);
+}
+body header.on .inner #gnb li i {
+  transform: translateY(0);
+}
+body header .inner {
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+}
+body header .inner h1 {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+body header .inner h1 a img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -100px;
+  transition: 0.5s;
+}
+body header .inner h1 a img:nth-of-type(2) {
+  transform: translateY(-100px);
+}
+body header .inner #gnb {
+  flex: 4.5;
+  top: 50px;
+  text-align: center;
+  margin-right: 50px;
+  z-index: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header .inner #gnb li {
+  float: left;
+  width: 150px;
+  position: relative;
+}
+body header .inner #gnb li:hover a {
+  background-color: #fff;
+  color: #292929;
+}
+body header .inner #gnb li a {
+  display: block;
+  width: 100%;
+  height: 50px;
+  font: bold 25px/50px "맑은 고딕";
+  color: #fff;
+  transition: 0.5s;
+}
+body header .inner #gnb li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 30px;
+  margin-top: -15px;
+  margin-left: -15px;
+  transition: 0.5s;
+  transform: translateY(-100px);
+}
+
+/*# sourceMappingURL=style.css.map */
